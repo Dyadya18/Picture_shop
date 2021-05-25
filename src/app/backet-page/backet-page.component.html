@@ -1,0 +1,170 @@
+<div class="bucket-page global-parameters" fxLayout="row">
+  <div class="bucket-page__column buy-form" fxFlex="65%" fxLayout="column">
+    <div class="buy-form__form" fxLayout="column">
+      <div class="buy-form__title" fxLayout="row">
+        <p>Billing Info</p>
+      </div>
+      <div class="buy-form__subtitle" fxLayout="row" fxLayoutAlign="space-between">
+        <p>Please enter your billing info</p>
+        <p>Step 1 of 5</p>
+      </div>
+      <div class="input-row billing-info" fxLayout="row" fxLayoutAlign="space-between">
+        <div class="input__column" fxLayout="column">
+          <div class="first-name" fxLayout="column">
+            <label for="firstName" class="first-name__label label">First name</label>
+            <input type="text" id="firstName" class="first-name__input input" placeholder="First name" label="First name">
+          </div>
+          <div class="email-address" fxLayout="column">
+            <label for="emailAddress" class="email-address__label label">Email address</label>
+            <input id="emailAddress" class="email-address__input input" placeholder="Email address" type="text">
+          </div>
+          <div class="address" fxLayout="column">
+            <label for="address" class="address__label label" fxLayout="column">Address</label>
+            <input id="address" class="address__input input" placeholder="Address" type="text">
+          </div>
+          <div class="state" >
+            <label for="state" class="state__label label" fxLayout="column">State/Country</label>
+            <input id="state" class="state__input input" placeholder="State/Country" type="text">
+          </div>
+          <div class="check-box different-address">
+            <mat-checkbox class="different-address__check">Ship to a different address?</mat-checkbox>
+          </div>
+        </div>
+        <div class="input__column" fxLayout="column">
+          <div class="last-name" fxLayout="column">
+            <label for="last-name" class="last-name__label label">Last name</label>
+            <input id="last-name" placeholder="Last name" class="last-name__input input" type="text">
+          </div>
+          <div class="phone-number" fxLayout="column">
+            <label for="phone-number" class="phone-number__label label">Phone number</label>
+            <input id="phone-number" placeholder="Phone number" class="phone-number__input input" type="text">
+          </div>
+          <div class="town-city" fxLayout="column">
+            <label for="town-city" class="town-city__label label">Town/City</label>
+            <input id="town-city" placeholder="Town/City" class="town-city__input input" type="text">
+          </div>
+          <div class="postal-code" fxLayout="column">
+            <label for="postal-code" class="postal-code__label label">ZIP/Postal code</label>
+            <input id="postal-code" placeholder="Postal-code" class="postal-code__input input" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="input-row billing-method" fxLayout="column">
+        <div class="billing-method__title">
+          <p>Billing method</p>
+        </div>
+        <div class="billing-method__subtitle" fxLayout="row" fxLayoutAlign="space-between">
+          <p>Please enter your payment method</p>
+          <p>Step 2 of 5</p>
+        </div>
+        <div class="billing-method__group radio-button">
+          <mat-radio-group >
+            <div class="radio-button__item" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-radio-button class="radio" value="FedEX">FedEX</mat-radio-button>
+              <span class="price-additional">+32 USD <span class="additional">Additional price</span></span>
+              <img class="radio-button__img" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/FedEx_Express.svg" alt="">
+            </div>
+            <div class="radio-button__item" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-radio-button class="radio" value="DHL">DHL</mat-radio-button>
+              <span class="price-additional">+15 USD <span class="additional">Additional price</span></span>
+              <img class="radio-button__img" src="http://helium-dive.com/wp-content/uploads/2020/08/magazine-article-dhl-png-logo-0-e1597424601709.png" alt="">
+            </div>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="payment-method">
+        <div class="payment-method__title">
+          <p>Payment method</p>
+        </div>
+        <div class="payment-method__subtitle" fxLayoutAlign="space-between">
+          <p>Please enter your payment method</p>
+          <p>Step 3 of 5</p>
+        </div>
+        <div class="payment-method__radio-buttons radio-button">
+          <mat-radio-group >
+            <div class="radio-button__item" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-radio-button class="radio" value="credit card">Credit Card</mat-radio-button>
+              <img class="radio-button__img" src="https://sheriff.com.ua/wp-content/uploads/2020/10/visa_mastercard_b249394e6e75c79fb3d09cb83f7a7159-300x109.png" alt="">
+            </div>
+            <div class="radio-button__item" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-radio-button class="radio" value="paypal">PayPal</mat-radio-button>
+              <img class="radio-button__img" src="http://pngimg.com/uploads/paypal/paypal_PNG19.png" alt="">
+            </div>
+            <div class="radio-button__item" fxLayout="row" fxLayoutAlign="space-between center">
+              <mat-radio-button class="radio" value="bitcoin">Bitcoin</mat-radio-button>
+              <img class="radio-button__img" src="http://pngimg.com/uploads/bitcoin/bitcoin_PNG45.png" alt="">
+            </div>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="additional-informations">
+        <div class="additional-informations__title">
+          <p>Additional informations</p>
+        </div>
+        <div class="additional-informations__subtitle" fxLayout="row" fxLayoutAlign="space-between">
+          <p>Need something else? We will make it for you!</p>
+          <p>Step 4 of 5</p>
+        </div>
+        <div class="additional-informations__text" fxLayout="column">
+          <label for="additional-info" class="label">Order notes</label>
+          <textarea name="" placeholder="Need a specific delivery day? Sending a gitf? Let’s say ..." id="additional-info" class="additional-informations__textarea"></textarea>
+        </div>
+      </div>
+      <div class="confirmation">
+        <div class="confirmation__title">
+          <p>Confirmation</p>
+        </div>
+        <div class="confirmation__subtitle" fxLayout="row" fxLayoutAlign="space-between">
+          <p>We are getting to the end. Just few clicks and your order si ready!</p>
+          <p>Step 5 of 5</p>
+        </div>
+        <div class="confirmation__check-group">
+          <div class="check-group">
+            <mat-checkbox class="check-group__box">I agree with sending an Marketing and newsletter emails. No spam, promissed!</mat-checkbox>
+          </div>
+          <div class="check-group">
+            <mat-checkbox class="check-group__box">I agree with our terms and conditions and privacy policy.</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="submit-button">
+        <button class="button-middle-complete">Complete order</button>
+      </div>
+    </div>
+  </div>
+  <div class="bucket-page__column" fxLayout="column" fxFlex="35%">
+    <div class="products">
+      <div class="products__title">
+        <p>Order Summary</p>
+      </div>
+      <div class="products__subtitle">
+        <p>Price can change depending on shipping method and taxes of your state.</p>
+      </div>
+      <div class="products-in-bucket">
+        <app-bucket-picture class="products__picture" *ngFor="let picture of getBucket$ | async" [picture]="picture"></app-bucket-picture>
+      </div>
+      <div class="products-price">
+        <div class="products-price__subtotal" fxLayout="row" fxLayoutAlign="space-between">
+          <p>Subtotal</p>
+          <p>{{getSubtotal}} USD</p>
+        </div>
+        <div class="products-price__tax" fxLayout="row" fxLayoutAlign="space-between">
+          <p>Tax</p>
+          <p class="get-tax">{{getTax}} %</p>
+        </div>
+        <div class="products-price__shipping" fxLayout="row" fxLayoutAlign="space-between">
+          <p>Shipping</p>
+          <p>0 %</p>
+        </div>
+      </div>
+      <div class="products-total" fxLayout="row" fxLayoutAlign="space-between">
+        <div class="products-total__order">
+          <p>Total Order</p>
+        </div>
+        <div class="products-total__price">
+          <p class="products__price">{{total}} USD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

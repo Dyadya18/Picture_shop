@@ -1,0 +1,46 @@
+<div class="block-header" fxLayout="column">
+  <div class="header global-parameters">
+    <div class="header-body" fxLayout="column">
+      <div class="header-body__top" fxLayout="row">
+        <div class="header-body__contacts" fxLayout="row" fxFlex="40%" fxLayoutGap="33px">
+          <a href="#"><p>Chat with us</p></a>
+          <p>{{'+380686302328' | phoneNumber}}</p>
+          <p appTooltip="This is Email">info@freshnesecom.com</p>
+        </div>
+        <div class="header-body__about" fxFlexOffset='40%' fxFlex="20%" fxLayoutAlign="flex-end" fxLayoutGap="38px" fxLayout="row">
+          <p><a class="text_a" href="#">Blog</a></p>
+          <a [routerLink]="['/about-us']"><p>About us</p></a>
+          <a [routerLink]="['/careers']"><p>Careers</p></a>
+        </div>
+      </div>
+      <div class="header-bottom" fxLayout="row" fxFlexOffset="40px" fxLayoutAlign="space-between center">
+        <div class="header-bottom__logo">
+          <a [routerLink]="['/']"><img src="../../assets/img/Freshnesecom.png" alt="Тут должен быть логотип"></a>
+        </div>
+        <div class="header-bottom__search search-panel" fxLayout="row" fxLayoutAlign="center center" fxFlex="40%">
+          <select class="search-panel__selector" name="Категории картин" id="" >
+            <option value="" selected>Все категории</option>
+            <option value='{{v.value}}' *ngFor="let v of category$ | async">
+              {{v.value}}
+            </option>
+          </select>
+          <input class="header-bottom__input-search" type="search"  fxFlex="65%">
+          <button class="header-bottom__btn btn-search" fxFlex="5%"><mat-icon>search</mat-icon></button>
+        </div>
+        <div class="header-bottom__people-info black-text">
+          <mat-icon>person_outline</mat-icon>
+          <mat-icon class="bucket" appTooltip='In your bucket {{countPicture$ | async}} products {{tooltip$ | async}}' routerLink="/bucket" fxFlexOffset="40px"><div class="badge" [@Size]="getStateAnimate$|async">{{countPicture$|async}}</div>shopping_basket</mat-icon>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-menu" fxLayout="row" fxFlexOffset="48px">
+    <app-menu></app-menu>
+  </div>
+  <div class="block-breadcrumbs global-parameters" fxLayout="row">
+    Хлібні крихти >
+  </div>
+</div>
+
+

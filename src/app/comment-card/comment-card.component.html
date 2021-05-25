@@ -1,0 +1,9 @@
+<mat-card class="comment-card" fxLayout="column" *ngIf="comment">
+  <mat-card-subtitle fxLayout="column" fxLayoutAlign="center">
+    <p fxLayout="row" fxLayoutAlign="center">{{comment.name | titlecase}}</p>
+    <p fxLayout="row" fxLayoutAlign="center">Score:<strong>{{comment.score}}</strong></p>
+  </mat-card-subtitle>
+  <mat-card-content fxLayout="row" fxLayoutAlign="center">
+    <p>{{comment.comment}}</p>
+  </mat-card-content>
+</mat-card>

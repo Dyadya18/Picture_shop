@@ -1,0 +1,75 @@
+<div class="homepage global-parameters">
+  <div class="homepage-column" fxLayout="column">
+    <div class="homepage-row"  fxLayout="row">
+      <div class="homepage-row__list-menu" fxFlex="20%" fxLayout="column">
+        <app-list-menu-best></app-list-menu-best>
+      </div>
+      <div class="homepage-row__products" fxLayoutAlign="space-between" fxFlex="70%" fxFlexOffset="10%" fxLayout="row">
+        <div class="homepage-row__banner banner" fxLayout="column">
+          <div class="banner-subtitle"><p>Banner subfocus</p></div>
+          <div class="banner-title"><p>Space for heading</p></div>
+          <div class="banner-btn" fxFlexOffset="60px"><button class="banner-btn__btn">Read recepies ></button></div>
+        </div>
+        <div class="homepage-row__banner banner" fxLayout="column">
+          <div class="banner-subtitle"><p>Banner subfocus</p></div>
+          <div class="banner-title"><p>Space for heading</p></div>
+          <div class="banner-btn" fxFlexOffset="60px"><button class="banner-btn__btn">Read recepies ></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="homepage-row">
+      <div class="homepage-row__list-menu" fxFlex="20%" fxLayout="column">
+        <app-list-menu-best></app-list-menu-best>
+      </div>
+      <div class="homepage-row__products section" fxFlex="70%" fxFlexOffset="10%" fxLayout="column" fxLayoutAlign="baseline">
+        <p class="section__title">Best Sellers</p>
+        <div class="section__products" fxLayout="row wrap" fxLayoutAlign="space-between baseline">
+          <app-product *ngFor="let bs of BestSellers" [product]="bs" fxFlex="30%"></app-product>
+        </div>
+      </div>
+    </div>
+    <div class="homepage-row">
+      <div class="homepage-row__list-menu" fxFlex="20%" fxLayout="column">
+        <app-list-menu-best></app-list-menu-best>
+      </div>
+      <div class="homepage-row__products section" fxFlex="70%" fxFlexOffset="10%" fxLayout="column" fxLayoutAlign="baseline">
+        <p class="section__title">Top Ranking</p>
+        <div class="section__products" fxLayout="row wrap" fxLayoutAlign="space-between baseline">
+          <app-product *ngFor="let product of topRanked$ | async" [product]="product" fxFlex="30%"></app-product>
+        </div>
+      </div>
+    </div>
+    <div class="homepage-row">
+      <div class="homepage-row__list-menu" fxFlex="20%" fxLayout="column">
+        <app-list-menu-best></app-list-menu-best>
+      </div>
+      <div class="homepage-row__products section" fxFlex="70%" fxFlexOffset="10%" fxLayout="column" fxLayoutAlign="baseline">
+        <p class="section__title">Most popular</p>
+        <div class="section__products" fxLayout="row wrap" fxLayoutAlign="space-between baseline">
+          <app-product *ngFor="let product of mostPopular$ | async" [product]="product" fxFlex="30%"></app-product>
+        </div>
+      </div>
+    </div>
+    <div class="homepage-row">
+      <div class="homepage-row__comments comments" fxLayout="column">
+        <div class="comments-header" fxLayout="row" fxLayoutAlign="space-between">
+          <p class="comments-header__title section__title">Our customers says</p>
+          <button class="comments-header__btn btn-none-bg">Button ></button>
+        </div>
+        <div class="comments-slider" fxLayout="row">
+          <drag-scroll #nav [snap-disabled]="true" [scrollbar-hidden]="true">
+            <button class="comments-slider__btn btn-slider-left" (click)="moveLeft()"> < </button>
+            <app-comment-card drag-scroll-item *ngFor="let comment of getComment$ | async" [comment]="comment"></app-comment-card>
+            <button class="comments-slider__btn btn-slider-right" (click)="moveRight()"> > </button>
+          </drag-scroll>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

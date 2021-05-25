@@ -1,0 +1,20 @@
+<div class="list-menu" fxLayoutAlign="space-between" fxLayout="column">
+  <div class="list-menu__title" fxLayout="row">
+    <p>{{nameCategory}}</p>
+  </div>
+  <div class="list-menu__category category-list" fxLayout="row">
+    <ul class="category-list" fxLayout="column">
+      <li class="category-list__item" *ngFor="let categ of category$ | async">
+        <a class="link-category"
+           [routerLink]="['/product-list']"
+           [queryParams]="{category: categ.value}">
+          {{categ.value}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="list-menu__btn" fxLayout="row">
+    <button class="btn-gray">More categories ></button>
+  </div>
+</div>
+

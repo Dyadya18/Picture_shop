@@ -1,0 +1,19 @@
+ <mat-card *ngIf="product" [@ProductAnimation]="stateAnimation">
+   <div  class="card"  fxLayout="column" fxLayoutAlign="space-around">
+     <div class="img-card-div" fxLayoutAlign="center center">
+       <img fxLayout="center center" mat-card-image class="img-card" src="{{product.img}}" alt="">
+     </div>
+     <mat-card-content>
+       <p class="product">{{product.name}}</p>
+       <p class="product subtitle">{{product.author}}</p>
+       <p>Год написания: {{product.yearCreate}}</p>
+     </mat-card-content>
+     <div class="footer-c" fxLayout="row" fxLayoutAlign="space-between">
+       <p fxLayoutAlign="start" class="price">{{product.seller}} $</p>
+       <mat-card-actions fxLayoutAlign="flex-end" class="group-btn-card">
+         <button class="button-middle-complete" mat-raised-button disabled *ngIf="isBuy">Already in bucket</button>
+         <button class="button-middle-complete" mat-raised-button *ngIf="isBuy === false" (click)="onBuyclick()">Buy now</button>
+       </mat-card-actions>
+     </div>
+   </div>
+  </mat-card>

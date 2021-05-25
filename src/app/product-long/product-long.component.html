@@ -1,0 +1,32 @@
+<div class="card" fxLayout="row" *ngIf="picture">
+  <div class="card__photo" fxLayout="column">
+    <img class="card__photo" src="{{picture.img}}">
+  </div>
+  <div class="card__info info" fxLayout="column" fxFlex="auto">
+    <div class="info-title" fxLayout="column">
+      <div class="info-title__title" fxLayout="row">
+        <h2>{{picture.name}}</h2>
+      </div>
+      <div class="info-tilte__subtitle" fxLayout="row">
+        <p>{{picture.author}}</p>
+      </div>
+      <div class="info-title__score" fxLayout="row"><mat-icon>star</mat-icon></div>
+    </div>
+    <div class="info-picture" fxLayout="row">
+      <div class="info-picture-key" fxLayout="column">
+        <p>Категория:</p>
+        <p>Year of create:</p>
+        <p>Count seller:</p>
+      </div>
+      <div class="info-picture-value" fxLayout="column" fxFlexOffset="2rem">
+        <p>{{picture.category}}</p>
+        <p>{{picture.yearCreate}}</p>
+        <p>{{picture.countSales}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="card__buy info-buy" fxFlex="25%" fxLayout="column" fxLayoutAlign="space-around">
+    <p class="info-buy__sale">Sale: {{picture.seller}}$</p>
+    <button class="button-middle-complete info-buy__btn" [routerLink]="['/product-list', picture.id]">Detail picture ></button>
+  </div>
+</div>

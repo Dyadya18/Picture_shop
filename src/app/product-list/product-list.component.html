@@ -1,0 +1,13 @@
+<div class="product-list global-parameters" fxLayout="column">
+  <div class="product-list__header">
+    <app-filter-header [category]="category"></app-filter-header>
+  </div>
+  <div class="product-list__section section-product" fxFlexOffset="64px" fxLayoutAlign="space-between" fxLayout="row">
+    <div class="section-product__filters" fxLayout="column" fxFlex="20%">
+      <app-filters></app-filters>
+    </div>
+    <div class="section-product__item" fxLayout="column" fxFlex="75%">
+      <app-product-long class="section-product__product" *ngFor="let picture of getSelectedPictures$ | async" [picture]="picture"></app-product-long>
+    </div>
+  </div>
+</div>

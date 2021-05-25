@@ -1,0 +1,60 @@
+<div class="">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form-comment" fxLayout="column">
+    <h2 class="name-section" fxLayout="row">Leave a reply</h2>
+    <div fxLayout="row" fxFlex="100%" fxLayoutAlign="center">
+      <div class="form-control" fxLayout="column" fxFlex="45%">
+        <label fxLayout="row">Name</label>
+        <input fxLayout="row" type="text" placeholder="Name" formControlName="user">
+        <div class="validation" *ngIf="form.get('user')!.invalid && form.get('user')!.touched">
+          <small *ngIf="form.get('user')!.errors!.required">Имя не должно быть пустым</small>
+          <small *ngIf="form.get('user')!.errors!.minlength">
+            Имя слишком короткое.
+            Оно должно содержать минимум {{form.get('user')!.errors!.minlength!.requiredLength}}.
+            Сейчас количество символом {{form.get('user')!.errors!.minlength!.actualLength}}
+          </small>
+          <small *ngIf="form.get('user')!.errors!.maxlength">
+            Имя слишком длинное.
+            Оно должно содержать максимум {{form.get('user')!.errors!.maxlength!.requiredLength}}.
+            Сейчас количество символом {{form.get('user')!.errors!.maxlength!.actualLength}}
+          </small>
+        </div>
+      </div>
+      <div class="form-control" fxLayout="column" fxFlexOffset="5%" fxFlex="45%">
+        <label fxLayout="row">Email</label>
+        <input fxLayout="row" type="text" placeholder="Email" formControlName="email">
+        <div class="validation" *ngIf="form.get('email')!.invalid && form.get('email')!.touched">
+          <small *ngIf="form.get('email')!.errors!.required">Email не должен быть пустым </small>
+          <small *ngIf="form.get('email')!.errors!.email">Введите коректный емайл </small>
+        </div>
+      </div>
+    </div>
+    <div class="form-control" fxLayout="row">
+      <label fxFlexOffset="2.5%">Score:</label>
+      <select class="selector" fxFlexOffset="2%" formControlName="score">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <div class="validation" *ngIf="form.get('score')!.touched && form.get('score')!.invalid">
+        <small *ngIf="form.get('score')!.errors!.required">Поставьте оценку</small>
+      </div>
+    </div>
+    <div class="form-control" fxLayout="column">
+      <label fxLayout="row">Comment</label>
+      <textarea class="input-comment" fxLayout="row" name="comment" id="" placeholder="Space for your comments" cols="30" rows="10" formControlName="comment"></textarea>
+      <div class="validation" *ngIf="form.get('comment')!.invalid">
+        <small *ngIf="form.get('comment')!.errors!.maxlength">
+          Коментарий слишком длинный.
+          Он должен содержать максимум {{form.get('comment')!.errors!.maxlength!.requiredLength}}.
+          Сейчас количество символом {{form.get('comment')!.errors!.maxlength!.actualLength}}
+        </small>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <button fxFlexOffset="1%" class="btn" type="submit" [disabled]="form.invalid">Send a comment</button>
+    </div>
+  </form>
+</div>

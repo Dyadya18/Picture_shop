@@ -1,0 +1,42 @@
+<div class="filter" fxLayout="column">
+  <div class="filter-header" fxLayout="row" fxLayoutAlign="space-between">
+    <div class="filter-header__title" fxLayout="column"><p>{{category}}</p></div>
+    <div class="filter-header__buttons_column" fxLayout="column" fxLayoutAlign="center">
+      <div class="filter-header__buttons-view" fxLayout="row" fxLayoutGap="32px">
+        <button class="filter-header__button" [ngClass]="{'button_active': activeGrid}" (click)="activeGrid = true; activeList = false" [routerLink]="['/product-grid']" [queryParams]="{category: category}"><mat-icon>grid_on</mat-icon>Grid view</button>
+        <button class="filter-header__button" [ngClass]="{'button_active': activeList}" (click)="activeList = true; activeGrid = false" [routerLink]="['/product-list']" [queryParams]="{category: category}"><mat-icon>reorder</mat-icon>List view</button>
+        <div class="filter-header__counter counter" fxLayout="row">
+          <div class="counter__count" fxLayout="column">132</div>
+          <p class="counter__title" fxLayout="column">Products</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-bottom" fxLayout="row" >
+    <div class="filter-bottom__radio-buttons" fxLayoutAlign="center center">
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Filter text</mat-radio-button>
+        <mat-radio-button value="2" fxFlexOffset="16px">Filter text</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="filter-bottom__checkbox checkbox" fxFlexOffset="16px" fxLayoutAlign="center center">
+      <section class="checkbox-1">
+        <mat-checkbox>Checked</mat-checkbox>
+      </section>
+      <span class="checkbox-1__title" fxFlexOffset="16px">Nbm</span>
+    </div>
+    <div class="filter-bottom__checkbox checkbox" fxFlexOffset="16px" fxLayoutAlign="center center">
+      <section class="checkbox-2">
+        <mat-checkbox>Checked</mat-checkbox>
+      </section>
+      <span class="checkbox-2__title" fxFlexOffset="16px">Nbm</span>
+    </div>
+    <div class="filter-bottom__checkbox checkbox" fxFlexOffset="16px" fxLayoutAlign="center center">
+      <section class="checkbox-3">
+        <mat-checkbox>Checked</mat-checkbox>
+      </section>
+      <span class="checkbox-3__title" fxFlexOffset="16px">Nbm</span>
+    </div>
+  </div>
+</div>
+

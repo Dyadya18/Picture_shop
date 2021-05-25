@@ -1,0 +1,172 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "value": "Натюрморт"
+    },
+    {
+      "id": 1,
+      "value": "Пейзаж"
+    },
+    {
+      "id": 2,
+      "value": "Историческая живопись"
+    },
+    {
+      "id": 3,
+      "value": "Анималистика"
+    },
+    {
+      "id": 4,
+      "value": "Марина"
+    },
+    {
+      "id": 5,
+      "value": "Батальная живопись"
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/12.jpg",
+      "name": "В ярких лучах",
+      "author": "БМ",
+      "seller": 12345,
+      "yearCreate": 1974,
+      "countSales": 6,
+      "rank": 8,
+      "category": "Натюрморт"
+    },
+    {
+      "id": 1,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/51.jpg",
+      "name": "Мальдивы",
+      "author": "Николаевич Татьяна",
+      "seller": 2500,
+      "yearCreate": 2015,
+      "countSales": 10,
+      "rank": 9,
+      "category": "Историческая живопись"
+    },
+    {
+      "id": 2,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/9.jpg",
+      "name": "Вечоріє в лісі",
+      "author": "Кущак Р.В.",
+      "seller": 1450,
+      "yearCreate": 2020,
+      "countSales": 1,
+      "rank": 10,
+      "category": "Анималистика"
+    },
+    {
+      "id": 3,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/10.jpg",
+      "name": "Тишина в горах",
+      "author": "Виторт Анастасия",
+      "seller": 4000,
+      "yearCreate": 2011,
+      "countSales": 4,
+      "rank": 4,
+      "category": "Историческая живопись"
+    },
+    {
+      "id": 4,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/13.jpg",
+      "name": "Ранее утро",
+      "author": "БТ",
+      "seller": 1500,
+      "yearCreate": 2002,
+      "countSales": 34,
+      "rank": 10,
+      "category": "Историческая живопись"
+    },
+    {
+      "id": 5,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/16.jpg",
+      "name": "Бирюзовая Мэрилин",
+      "author": "Энди Уорхол",
+      "seller": 78000,
+      "yearCreate": 1950,
+      "countSales": 1,
+      "rank": 9,
+      "category": "Марина"
+    },
+    {
+      "id": 6,
+      "img": "https://say-hi.me/wp-content/uploads/2014/10/17.jpg",
+      "name": "Бал в Мулен де ла Галет",
+      "author": "Пьер Огюст Ренуар",
+      "seller": 76000,
+      "yearCreate": 1940,
+      "countSales": 2,
+      "rank": 3,
+      "category": "Батальная живопись"
+    }
+  ],
+  "comments": [
+    {
+      "idPicture": 5,
+      "namePicture": "Бирюзовая Мэрилин",
+      "id": "0",
+      "name": "vlad",
+      "email": "vlad@mail.com",
+      "score": "4",
+      "comment": "this is shop is very cool"
+    },
+    {
+      "idPicture": 5,
+      "namePicture": "Бирюзовая Мэрилин",
+      "comment": "sadfsadf",
+      "name": "vaasdas",
+      "score": "3",
+      "email": "vlasd@gasd.com",
+      "id": "ddVAw_1"
+    },
+    {
+      "idPicture": 5,
+      "namePicture": "Бирюзовая Мэрилин",
+      "comment": "asdfsaf",
+      "name": "vlad",
+      "score": "3",
+      "email": "vlad@gmai.com",
+      "id": "PGT1xZR"
+    },
+    {
+      "idPicture": 5,
+      "namePicture": "Бирюзовая Мэрилин",
+      "comment": "asdasd",
+      "name": "Vald",
+      "score": "2",
+      "email": "vsd@fas",
+      "id": "74r-WYI"
+    },
+    {
+      "comment": "asdsadasdsaqwertydfbgncxcv  sd fsdgfdfgdf df",
+      "name": "Addd",
+      "score": "2",
+      "email": "vladocer@gmail.com",
+      "idPicture": 6,
+      "namePicture": "Бал в Мулен де ла Галет",
+      "id": "-ySnZxS"
+    },
+    {
+      "comment": "My comment",
+      "name": "Max",
+      "score": "4",
+      "email": "vlados@d",
+      "idPicture": 6,
+      "namePicture": "Бал в Мулен де ла Галет",
+      "id": "dYt-d_v"
+    },
+    {
+      "comment": "Letichev the best town of ukrain",
+      "name": "Vlad",
+      "score": "5",
+      "email": "vlad@letichev",
+      "idPicture": 1,
+      "namePicture": "Мальдивы",
+      "id": "2pg-026"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<div class="bucket-picture" *ngIf="picture">
+  <div class="bucket-picture__row" fxLayout="row">
+    <div class="bucket-picture__column picture-block" fxLayout="column">
+      <div class="picture-block__img">
+        <img src="{{picture.img}}" alt="">
+      </div>
+      <div class="picture-block-buttons">
+        <div class="picture-block-button wishlist" fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon class="wishlist__icon">favorite_border</mat-icon>
+          <button class="wishlist__button">Wishlist</button>
+        </div>
+        <div class="picture-block-button compare" fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon class="compare__icon">compare_arrows</mat-icon>
+          <button class="compare__button">Compare</button>
+        </div>
+        <div class="picture-block-button remove" (click)="RemovePictureBucket(picture.id)" fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon class="remove__icon">clear</mat-icon>
+          <button class="remove__button">Remove</button>
+        </div>
+      </div>
+    </div>
+    <div class="bucket-picture__column picture-info" fxLayout="column">
+        <div class="picture-info__title" fxLayout="row">
+          <p>{{picture.name}}</p>
+        </div>
+      <div class="picture-info__info" fxLayout="column">
+        <div class="picture-info__parameters" fxLayout="row">
+          <div class="picture-info-key" fxLayout="column">
+            <p>Author:</p>
+            <p>Year of create:</p>
+          </div>
+          <div class="picture-info-value" fxLayout="column" fxFlexOffset="1rem">
+            <p>{{picture.author}}</p>
+            <p>{{picture.yearCreate}}</p>
+          </div>
+        </div>
+        <div class="picture-info__score" fxLayout="row">
+          <mat-icon>star</mat-icon>
+        </div>
+      </div>
+      <div class="picture-info__buy-panel buy-panel" fxLayout="row">
+        <div class="buy-panel__sale"><p>{{picture.seller}} USD</p></div>
+        <div class="buy-panel__count"></div>
+      </div>
+    </div>
+  </div>
+</div>

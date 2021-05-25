@@ -1,0 +1,120 @@
+<div class="section-product">
+  <div class="section-product__filter categories" fxLayout="column">
+    <div class="section-product__header" fxLayout="row">
+      <p>Categories</p>
+    </div>
+    <div class="category-list" fxLayout="row" fxLayoutAlign="space-between">
+      <div class="category-list__column" fxLayout="column">
+        <div class="category-list__item">
+          <p *ngFor=" let category of category$ | async">{{category.value}}</p>
+        </div>
+      </div>
+      <div class="category-list__column" fxLayout="column">
+        <div class="filter-header__counter counter" fxLayout="row">
+          <div class="counter__count" fxLayout="column">132</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-product__filter author" fxLayout="column">
+    <div class="section-product__header" fxLayout="row">
+      <p>Author</p>
+    </div>
+    <div class="author-list">
+      <section fxLayout="column" fxLayoutGap="16px">
+        <mat-checkbox *ngFor=" let picture of pictures$ | async" fxLayout="row">
+          <div class="author-list__item">{{picture.author}}</div>
+        </mat-checkbox>
+      </section>
+    </div>
+  </div>
+  <div class="section-product__filter rating" fxLayout="column">
+    <div class="section-product__header" fxLayout="row">
+      <p>Rating</p>
+    </div>
+    <div class="rating-list" fxLayout="row">
+      <section class="rating-list__check-section" fxLayout="column" fxLayoutGap="16px">
+        <mat-checkbox class="rating-list__checkbox" >
+          <div class="sketched-stars" fxLayout="row">
+            <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+          </div>
+        </mat-checkbox>
+        <mat-checkbox class="rating-list__checkbox stars">
+          <div class="stars__row" fxLayout="row">
+            <div class="stars__column" fxLayout="column">
+              <div class="sketched-stars" fxLayout="row">
+                <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+              </div>
+            </div>
+            <div class="stars__column" fxLayout="column">
+              <div class="nonsketched-stars" fxLayout="row">
+                <mat-icon>star_border</mat-icon>
+              </div>
+            </div>
+          </div>
+        </mat-checkbox>
+        <mat-checkbox class="rating-list__checkbox stars">
+          <div class="stars__row" fxLayout="row">
+            <div class="stars__column" fxLayout="column">
+              <div class="sketched-stars" fxLayout="row">
+                <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+              </div>
+            </div>
+            <div class="stars__column" fxLayout="column">
+              <div class="nonsketched-stars" fxLayout="row">
+                <mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon>
+              </div>
+            </div>
+          </div>
+        </mat-checkbox>
+        <mat-checkbox class="rating-list__checkbox stars">
+          <div class="stars__row" fxLayout="row">
+            <div class="stars__column" fxLayout="column">
+              <div class="sketched-stars" fxLayout="row">
+                <mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+              </div>
+            </div>
+            <div class="stars__column" fxLayout="column">
+              <div class="nonsketched-stars" fxLayout="row">
+                <mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon>
+              </div>
+            </div>
+          </div>
+        </mat-checkbox>
+        <mat-checkbox class="rating-list__checkbox stars">
+          <div class="stars__row" fxLayout="row">
+            <div class="stars__column" fxLayout="column">
+              <div class="sketched-stars" fxLayout="row">
+                <mat-icon>star</mat-icon>
+              </div>
+            </div>
+            <div class="stars__column" fxLayout="column">
+              <div class="nonsketched-stars" fxLayout="row">
+                <mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon>
+              </div>
+            </div>
+          </div>
+        </mat-checkbox>
+      </section>
+    </div>
+  </div>
+  <div class="section-product__filter price-filter" fxLayout="column">
+    <div class="section-product__header" fxLayout="row">
+      <p>Price</p>
+    </div>
+    <div class="price-filter__inputs" fxLayout="row" fxLayoutAlign="space-between">
+      <div class="price-filter__block input" fxLayout="column">
+        <label class="input__label" for="min">Min</label>
+        <input class="input__input" id="min" type="text" placeholder="Min.">
+      </div>
+      <div class="price-filter__block input" fxLayout="column">
+        <label class="input__label" for="max">Max</label>
+        <input class="input__input" id="max" type="text" placeholder="Max.">
+      </div>
+    </div>
+  </div>
+  <div class="section-product__buttons">
+    <button class="button-middle-complete">Apply</button>
+    <button class="btn-none-bg">Reset</button>
+  </div>
+</div>

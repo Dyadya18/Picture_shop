@@ -1,0 +1,58 @@
+<div class="page-picture global-parameters" [@FadeIn] fxLayout="row">
+  <div class="page-picture__photo" fxLayout="column">
+    <img src="{{picture.img}}}" alt="">
+    <img src="{{picture.img}}" alt="">
+    <img src="{{picture.img}}" alt="">
+  </div>
+  <div class="page-picture__info info-picture" fxLayout="column" >
+    <div class="info-picture__title" fxLayout="row">
+      <h1>{{picture.name}}</h1>
+    </div>
+    <div class="info-picture__score" fxLayout="row">
+      <mat-icon>stars</mat-icon>
+    </div>
+    <div class="info-picture__about" fxLayout="row">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquam aliquid architecto aspernatur cum ducimus ea enim,
+        eos est expedita inventore ipsa maiores minus,
+        odio optio quos reiciendis saepe sint totam?</p>
+    </div>
+    <div class="info-picture__parameters" fxLayout="row">
+      <div class="info-picture-key" fxLayout="column">
+        <p>Категория:</p>
+        <p>Year of create:</p>
+        <p>Count seller:</p>
+      </div>
+      <div class="info-picture-value" fxLayout="column" fxFlexOffset="2rem">
+        <p>{{picture.category}}</p>
+        <p>{{picture.yearCreate}}</p>
+        <p>{{picture.countSales}}</p>
+      </div>
+    </div>
+    <div class="info-picture__buy-panel buy-panel" fxLayout="row" fxLayoutAlign="space-around center">
+      <div class="buy-panel__sale" fxLayout="column">
+        <h1>{{picture.seller}} $</h1>
+      </div>
+      <div class="buy-panel__btn" fxLayout="column">
+        <button class="button-middle-complete" mat-raised-button disabled *ngIf="isBuy">Already in bucket</button>
+        <button (click)="onBuyclick()" class="button-middle-complete" *ngIf="isBuy === false">+ Add to card</button>
+      </div>
+    </div>
+    <div class="info-picture__button-panel button-panel">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Aliquam ducimus eveniet ex laudantium maxime, molestias provident soluta tenetur ut!
+          Alias aliquam aperiam nostrum. Atque blanditiis consequuntur cumque dolor dolorem eveniet fugit harum hic impedit iure,
+          laborum minima neque perferendis, perspiciatis quaerat quibusdam ratione, reiciendis rerum soluta velit.
+          Aperiam assumenda autem consequuntur dolor, ducimus eligendi error,
+          eveniet excepturi fugiat fugit in ipsam iste laborum maxime minus neque nesciunt nostrum porro possimus praesentium
+          quidem quis quo quod sed tempore ullam veritatis! Amet assumenda enim eveniet ex magni perspiciatis quia
+          rerum similique! Aliquam delectus eveniet inventore labore nesciunt quisquam rem sit vel veniam!</mat-tab>
+        <mat-tab label="Add Comment"><app-form-comment></app-form-comment></mat-tab>
+        <mat-tab label="Comments">
+          <app-comment-card drag-scroll-item *ngFor="let comment of getComments$ | async" [comment]="comment"></app-comment-card>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

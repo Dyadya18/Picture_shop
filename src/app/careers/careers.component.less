@@ -1,0 +1,44 @@
+.picture{
+  background-image: url("https://www.coventor.com/wp-content/uploads/2018/09/Careers-background-image.jpg");
+  width: 100%;
+}
+.careers{
+  &__title{
+    margin: 32px 0;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #151515;
+  }
+  &__subtitle{
+    margin: 32px 0;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+    color: #151515;
+  }
+}
+.list{
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  &__item{
+    position: relative;
+    &:before{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      content: '';
+      transform: translateY(-50%);
+      width: 3rem;
+      height: 3rem;
+      background: no-repeat center url("https://img2.freepng.ru/20180320/hxq/kisspng-check-mark-computer-icons-clip-art-green-check-mark-2-icon-5ab1d1c01cb222.3320573215216030081176.jpg");
+      background-size: 100%;
+    }
+    padding-left: 3.5rem;
+  }
+}
